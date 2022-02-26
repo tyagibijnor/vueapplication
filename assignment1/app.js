@@ -1,16 +1,15 @@
 const app = Vue.createApp({
   data() {
     return {
-      name: "Kuhu",
-      age: 4,
-      favnumber: "1",
-      enteredName: "",
+      name: "Tyagi",
+      age: 20,
+      favnumber: "1",      
       img: "test.jpg"
     };
   },
   methods: {
     myfavnumber() {
-      const randomNumber = Math.round(Math.random());
+      const randomNumber = Math.random();
       return randomNumber;
     },
 
