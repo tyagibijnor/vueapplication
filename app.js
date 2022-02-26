@@ -1,10 +1,11 @@
 const app = Vue.createApp({
   data() {
-
-      return {
+    return {
+      testmessage: "Welcome for test",
       learn: "Learning Vue!",
       master: "Mastering Vue!",
       mylink: "https://navneettyagi.com",
+      boldmsg: "<b>Welcome Navneet</b>",
     };
   },
   methods: {
@@ -16,6 +17,9 @@ const app = Vue.createApp({
         return this.master;
       }
     },
+    welcome(){
+      return this.boldmsg;
+    }
   },
 });
 

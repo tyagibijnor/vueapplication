@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Test</title>
+    <title>Vue Application</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="app">
       <section id="user-goal">
-        <p>{{ message1 }}</p>
+        <p>{{ testmessage }}</p>
         <p>About me <a v-bind:href="mylink"> check this</a></p>
         <p>{{ outputMsg() }}</p>
+        <p v-html="welcome()"></p>
+       
       </section>
       <script src="https://unpkg.com/vue@next"></script>
       <script src="app.js"></script>
