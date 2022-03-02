@@ -4,7 +4,7 @@ const app = Vue.createApp({
       name: "Tyagi",
       age: 20,
       favnumber: "1",      
-      img: "test.jpg"
+      img: "https://www.gstatic.com/webp/gallery/4.webp"
     };
   },
   methods: {
