@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue Application</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <div id="app">
       <section id="user-goal">
-        <p>{{ testmessage }}</p>
-        <p>About me <a v-bind:href="mylink"> check this</a></p>
-        <p>{{ outputMsg() }}</p>
-        <p v-html="welcome()"></p>
-       
+                
+        <p>My Name is {{ name }}</p>
+        <p>{{ age }} years is current age. </p>
+        <p>{{ ageadd() }} years age in next 5 Years.</p>
+        <p>Favorite Random Number is (Between 0 AND 1 ) {{ myfavnumber() }}</p>        
+        <img v-bind:src="img" width="500" height="120">        
+        <input type="text" v-bind:value="name" />
       </section>
       <script src="https://unpkg.com/vue@next"></script>
       <script src="app.js"></script>
