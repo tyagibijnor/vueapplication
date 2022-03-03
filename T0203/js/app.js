@@ -11,8 +11,7 @@ const app = Vue.createApp({
       myfavnumber() {
         const randomNumber = Math.random();
         return randomNumber;
-      },
-  
+      },  
       ageadd() {
         return this.age + 5;
       },
