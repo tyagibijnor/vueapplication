@@ -12,8 +12,11 @@
        <button v-on:click="addNum(5)">Add 5</button>
        <button v-on:click="subNum(5)">Reduce 5</button>
         <p> Result : {{ counter }} </p>
-        <p> Input Name : <input type="text" v-on:input="inputVal" /> </p>        
-        <p> Output Name : {{ inputValue }}</p>
+        <p> 
+          <!--Input Name : <input type="text" v-bind:value="inputValue" v-on:input="inputVal" />  -->
+          Input Name : <input type="text" v-model="inputValue" /> 
+        <button v-on:click="resetValue">Reset</button></p>        
+        <p> Output Name : {{ inputValue }}</p>        
       </section>
       <script src="https://unpkg.com/vue@next"></script>
       <script src="js/app.js"></script>

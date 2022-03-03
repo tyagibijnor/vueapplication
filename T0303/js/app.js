@@ -14,6 +14,9 @@ const app = Vue.createApp({
     },
     inputVal(event){
       this.inputValue = event.target.value;
+    },
+    resetValue(){
+      this.inputValue = '';
     }
   }
 });
