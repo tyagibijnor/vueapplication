@@ -19,7 +19,7 @@
         <button v-on:click="resetValue">Reset</button></p>        
         <p> Output Name : {{ inputValue }}</p>   
         <h2>Form Sample</h2>   
-        <form v-on:submit="submitForm">
+        <form v-on:submit.prevent="submitForm">
           <p><input type="text">
           <button>Submit</button>
         </p>
