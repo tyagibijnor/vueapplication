@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B-T0403</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+     <section id="events">
+       <h2> Play with events </h2>
+       <button v-on:click.left="addNum(5)">Add 5</button>
+       <button v-on:click.left="subNum(5)">Reduce 5</button>
+       <p v-once> Starting Value of Counter : {{ counter }} </p>
+        <p> Result : {{ counter }} </p>
+        <h2>Input Sample</h2>
+        <p> 
+          <!--Input Name : <input type="text" v-bind:value="inputValue" v-on:input="inputVal" />  -->
+          Input Name : <input type="text" 
+          v-on:input="inputVal" 
+          v-on:keyup.enter="confirmName" 
+          /> 
+          </p>
+          <p> Output Name : {{ confirmedName }}
+        <button v-on:click="resetValue">Reset</button></p>        
+        
+        <h2>Form Sample prevent refresh</h2>   
+        <form v-on:submit.prevent="submitForm">
+          <p><input type="text">
+          <button>Submit</button>
+        </p>
+        </form>  
+      </section>
+      <script src="https://unpkg.com/vue@next"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
