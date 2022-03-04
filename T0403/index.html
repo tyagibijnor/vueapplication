@@ -8,15 +8,22 @@
   </head>
   <body>
      <section id="events">
-       <h1> Play with events </h1>
+       <h2> Play with events </h2>
        <button v-on:click="addNum(5)">Add 5</button>
        <button v-on:click="subNum(5)">Reduce 5</button>
         <p> Result : {{ counter }} </p>
+        <h2>Input Sample</h2>
         <p> 
           <!--Input Name : <input type="text" v-bind:value="inputValue" v-on:input="inputVal" />  -->
           Input Name : <input type="text" v-model="inputValue" /> 
         <button v-on:click="resetValue">Reset</button></p>        
-        <p> Output Name : {{ inputValue }}</p>        
+        <p> Output Name : {{ inputValue }}</p>   
+        <h2>Form Sample</h2>   
+        <form v-on:submit="submitForm">
+          <p><input type="text">
+          <button>Submit</button>
+        </p>
+        </form>  
       </section>
       <script src="https://unpkg.com/vue@next"></script>
       <script src="js/app.js"></script>
