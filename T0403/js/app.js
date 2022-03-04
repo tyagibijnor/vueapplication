@@ -59,6 +59,5 @@ const assin = Vue.createApp({
     }
   }
 });
-
 assin.mount("#assignment");
 

@@ -71,7 +71,6 @@ header {
   border-radius: 20px;
   margin: 0 1rem;
 }
-
 #events button:hover,
 #events button:active {
   background-color: #ec3169;
