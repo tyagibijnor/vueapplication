@@ -10,15 +10,20 @@
      <section id="events">
        <h2> Play with events </h2>
        <button v-on:click.left="addNum(5)">Add 5</button>
-       <button v-on:click.right="subNum(5)">Reduce 5</button>
+       <button v-on:click.left="subNum(5)">Reduce 5</button>
         <p> Result : {{ counter }} </p>
         <h2>Input Sample</h2>
         <p> 
           <!--Input Name : <input type="text" v-bind:value="inputValue" v-on:input="inputVal" />  -->
-          Input Name : <input type="text" v-model="inputValue" /> 
+          Input Name : <input type="text" 
+          v-on:input="inputVal" 
+          v-on:keyup.enter="confirmName" 
+          /> 
+          </p>
+          <p> Output Name : {{ confirmedName }}
         <button v-on:click="resetValue">Reset</button></p>        
-        <p> Output Name : {{ inputValue }}</p>   
-        <h2>Form Sample</h2>   
+        
+        <h2>Form Sample prevent refresh</h2>   
         <form v-on:submit.prevent="submitForm">
           <p><input type="text">
           <button>Submit</button>
