@@ -3,10 +3,14 @@ const app = Vue.createApp({
     return {
       counter: 10,
       inputValue:'',
-      confirmedName: ''
+      confirmedName: '',
+      inputValueOutput:''
     };
   },
-  methods: {    
+  methods: {  
+    showAlert(){
+      alert("Hello!!");
+    },
     submitForm(event){
       alert("Form Submitted!!");
     },
@@ -15,6 +19,9 @@ const app = Vue.createApp({
     },
     subNum(num) {
       this.counter = this.counter - num;
+    },
+    inputValOutput(event){
+      this.inputValueOutput = event.target.value;
     },
     inputVal(event){
       this.inputValue = event.target.value;
@@ -28,4 +35,30 @@ const app = Vue.createApp({
   }
 });
 app.mount("#events");
+const assin = Vue.createApp({
+  data() {
+    return {
+      counter: 10,
+      inputValue:'',
+      confirmedName: '',
+      inputValueOutput:''
+    };
+  },
+  methods: {  
+    showAlert(){
+      alert("Hello!!");
+    },
+    inputValOutput(event){
+      this.inputValueOutput = event.target.value;
+    },
+    inputVal(event){
+      this.inputValue = event.target.value;
+    },
+    confirmName(){
+      this.confirmedName = this.inputValue;
+    }
+  }
+});
+
+assin.mount("#assignment");
 
