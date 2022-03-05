@@ -10,32 +10,39 @@ const app = Vue.createApp({
       };
     },
     watch: {
-      fname(value){        
-        // console.log(" Test ");
-        if ( value === '') {
-          this.fullName = '';
-        } else {
-          console.log("line18");
-          this.fullName = value + ' ' + this.lname;
-        } 
-      },
-      lname(value){
-        // console.log(" Test 2 ");
-        if ( value === '' ) {
-          this.fullName = '';
-        } else {
-          this.fullName = this.fname + ' ' + value;
-        }
-      }
+      // fname(value){        
+      //   // console.log(" Test ");
+      //   if ( value === '') {
+      //     this.fullName = '';
+      //   } else {
+      //     console.log("line18");
+      //     this.fullName = value + ' ' + this.lname;
+      //   } 
+      // },
+      // lname(value){
+      //   // console.log(" Test 2 ");
+      //   if ( value === '' ) {
+      //     this.fullName = '';
+      //   } else {
+      //     this.fullName = this.fname + ' ' + value;
+      //   }
+      // }
     },
-    computed:{
-      // showLog(){
+    computed:{ 
+// showLog(){
       //   console.log('Running conputed code');        
       // },
       // ShowOutPut(){
-      //   return this.outputVal;
-      // }
-    },
+      //   return this.outputVal;      
+      UserFullName(){        
+        console.log("In computed");
+       if ( this.fname === '' || this.lname === '') {
+         return '';
+       } 
+         return this.fname + ' ' + this.lname;
+       
+     }
+    },      
     methods: {  
       outputValue(event){
         this.outputVal = event.target.value;
