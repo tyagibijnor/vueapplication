@@ -9,9 +9,14 @@
   <body>
      <section id="events">
        <h2> VUE EVENTS </h2>       
-       <input type="text" v-on:keyup.enter="outputValue"/>      
+       Input : <input type="text" v-on:keyup.enter="outputValue"/>      
         <p> Output : {{ outputVal }} </p>   
-        <p> Computed Sample : {{ showLog }} </p>        
+        <h2> Computed </h2>   
+        <!-- <p> Computed Sample : {{ ShowOutPut }} </p>         -->
+        <h2> Watch </h2>   
+        FirstName : <input type="text" v-model="fname" />   
+        LastName : <input type="text" v-model="lname" />   
+        <p>{{ fullName }}</p>
       </section>
       <script src="https://unpkg.com/vue@next"></script>
       <script src="js/app.js"></script>
