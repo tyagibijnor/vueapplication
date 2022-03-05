@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B-T0503</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+     <section id="events">
+       <h2> VUE EVENTS </h2>       
+       Input : <input type="text" v-on:keyup.enter="outputValue"/>      
+        <p> Output : {{ outputVal }} </p>   
+        <h2> Computed </h2>   
+        <!-- <p> Computed Sample : {{ ShowOutPut }} </p>         -->
+        <h2> Watch </h2>   
+        FirstName : <input type="text" v-model="fname" />   
+        LastName : <input type="text" v-model="lname" />   
+        <p>{{ UserFullName }}</p>
+      </section>
+      <script src="https://unpkg.com/vue@next"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
