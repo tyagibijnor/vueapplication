@@ -3,13 +3,38 @@ const app = Vue.createApp({
       return {
         counter: 10,
         inputVal: '',
-        outputVal:''
+        outputVal: '',
+        fname: '',
+        lname: '',
+        fullName: ''
       };
     },
-    computed:{
-      showLog(){
-        console.log('Running conputed code');
+    watch: {
+      fname(value){        
+        // console.log(" Test ");
+        if ( value === '') {
+          this.fullName = '';
+        } else {
+          console.log("line18");
+          this.fullName = value + ' ' + this.lname;
+        } 
+      },
+      lname(value){
+        // console.log(" Test 2 ");
+        if ( value === '' ) {
+          this.fullName = '';
+        } else {
+          this.fullName = this.fname + ' ' + value;
+        }
       }
+    },
+    computed:{
+      // showLog(){
+      //   console.log('Running conputed code');        
+      // },
+      // ShowOutPut(){
+      //   return this.outputVal;
+      // }
     },
     methods: {  
       outputValue(event){
