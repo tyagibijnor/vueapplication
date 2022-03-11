@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue Basics</title>
+    <title>Dragon Fighter</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
       rel="stylesheet"
@@ -50,7 +50,7 @@
           <li v-for="logMessage in logMessages">
             <span
               :class="{'log--player': logMessage.actionBy === 'player', 'log--monster': logMessage.actionBy === 'monster'}"
-              >{{ logMessage.actionBy === 'player' ? 'Player' : 'Monster'
+              >{{ logMessage.actionBy === 'player' ? 'Player' : 'Dragon'
               }}</span
             >
             <span v-if="logMessage.actionType === 'heal'">
