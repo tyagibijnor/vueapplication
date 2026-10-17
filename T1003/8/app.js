@@ -65,3 +65,50 @@ const app = Vue.createApp({
 });
 
 app.mount('#events');
+let resetTimeout;
+
+const app = Vue.createApp({
+  data() {
+    return {
+      counter: 0,
+      name: '',
+      lastName: '',
+    };
+  },
+  watch: {
+    counter(value) {
+      clearTimeout(resetTimeout);
+      if (value > 50) {
+        resetTimeout = setTimeout(() => {
+          this.counter = 0;
+          resetTimeout = undefined;
+        }, 2000);
+      }
+    },
+  },
+  computed: {
+    fullname() {
+      if (!this.name || !this.lastName) {
+        return '';
+      }
+      return `${this.name} ${this.lastName}`;
+    },
+  },
+  methods: {
+    add(num) {
+      this.counter += num;
+    },
+    reduce(num) {
+      this.counter -= num;
+    },
+    resetInput() {
+      this.name = '';
+      this.lastName = '';
+    },
+  },
+  beforeUnmount() {
+    clearTimeout(resetTimeout);
+  },
+});
+
+app.mount('#events');

@@ -1,3 +1,5 @@
+let resetTimeout;
+
 const app = Vue.createApp({
   data() {
     return {
@@ -16,11 +18,11 @@ const app = Vue.createApp({
     },
   },
   watch: {
-    res() {
-      const that = this;
-      console.log(that.Result);
-      setTimeout(function () {
-        that.Result = 0;
+    Result() {
+      clearTimeout(resetTimeout);
+      resetTimeout = setTimeout(() => {
+        this.Result = 0;
+        resetTimeout = undefined;
       }, 5000);
     },
   },
@@ -31,6 +33,9 @@ const app = Vue.createApp({
     addNum(num) {
       this.Result = this.Result + num;
     },
+  },
+  beforeUnmount() {
+    clearTimeout(resetTimeout);
   },
 });
 app.mount("#events");

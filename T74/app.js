@@ -32,15 +32,10 @@ app.component('friend-contact', {
     </ul>
   </li>
   `,
+  props: ['friend'],
   data() {
     return {
       detailsAreVisible: false,
-      friend: {
-        id: 'vikas',
-        name: 'Vikas Singh',
-        phone: '01234 5678 991',
-        email: 'vikas@localhost.com',
-      },
     };
   },
   methods: {

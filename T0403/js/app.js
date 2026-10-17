@@ -34,30 +34,4 @@ const app = Vue.createApp({
     }
   }
 });
-app.mount("#events");
-const assin = Vue.createApp({
-  data() {
-    return {
-      counter: 10,
-      inputValue:'',
-      confirmedName: '',
-      inputValueOutput:''
-    };
-  },
-  methods: {  
-    showAlert(){
-      alert("Hello!!");
-    },
-    inputValOutput(event){
-      this.inputValueOutput = event.target.value;
-    },
-    inputVal(event){
-      this.inputValue = event.target.value;
-    },
-    confirmName(){
-      this.confirmedName = this.inputValue;
-    }
-  }
-});
-assin.mount("#assignment");
-
+app.mount(document.querySelector("#events, #assignment"));
